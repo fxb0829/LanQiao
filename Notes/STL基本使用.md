@@ -1,5 +1,7 @@
 # STL基本使用
+
 ## C标准库常用函数
+
 1. `<cstring>`
 
 |`strlen()`|字符串长度|
@@ -14,6 +16,7 @@ char str[100];
 ...
 memset(str,0,sizeof(str));  //str字符数组全部置为0
 ```
+
 2. `<cmath>`
 
 三角函数、指数函数、浮点取整函数
@@ -37,9 +40,8 @@ memset(str,0,sizeof(str));  //str字符数组全部置为0
 | ----- | ----- |
 |`isalpha()`|判断字符是否为大小写字母|
 
-
-
 ## STL-<vector>
+
 `vector`可以看成一个“超级数组”
 
 1. 基本使用
@@ -78,6 +80,7 @@ for(p = arr.begin(); p != arr.end(); p++)
     cout << *p << endl;
 }
 ```
+
 2. 常见操作
 
 |`list.size()`|数组元素个数$O(1)$|
@@ -90,9 +93,8 @@ for(p = arr.begin(); p != arr.end(); p++)
 |`list.push_back()`|往数组添加元素$O(1)$|
 |`list.pop_back()`|删除数组的最后一个元素$O(1)$|
 
-
-
 ### STL-<string>
+
 1. 基本使用
 
 ```cpp
@@ -100,6 +102,7 @@ string str1 = "hello";
 string str2;
 str2.push_back("!");
 ```
+
 2. 基本操作
 
 |`str.length(), str.size()`|字符串长度$O(n)$|
@@ -113,9 +116,8 @@ str2.push_back("!");
 |`str += str2`|`str.append(str2)`|
 |`str += 'a'`|`str.push_back('a')`|
 
-
-
 ## STL-<algorithm>
+
 包含大量的算法
 
 1. sort快速排序
@@ -147,6 +149,7 @@ int main(){
     return 0;
 }
 ```
+
 2. 最大最小值
 
 ```cpp
@@ -159,22 +162,26 @@ min_element(arr.begin(),arr.end());
 //类似快排
 nth_element(arr.begin(),arr.begin()+n,arr.end()); //O(n)
 ```
+
 3. 交换两个同类型变量
 
 ```cpp
 swap(arr[0],arr[1]);
 ```
+
 4. 翻转数组
 
 ```cpp
 reverse(arr.begin(),arr.end());
 ```
+
 5. 数组去重
 
 ```cpp
 //假设数组已经排好序,返回去重后的数组长度
 int newLength = unique(arr.begin(),arr.end()-arr.begin());
 ```
+
 6. 二分查找
 
 ```cpp
@@ -190,13 +197,14 @@ int firstLoc = lower_bound(arr.begin(),arr.end(),2)-arr.begin(); //2
 int lastLoc = upper_bound(arr.begin(),arr.end(),2)-arr.begin(); //4
 ```
 
-
 ## STL-<stack>
+
 ```cpp
 #include <stack>
 
 stack<int> sta;
 ```
+
 |`sta.push()`|入栈|
 | ----- | ----- |
 |`sta.topElement = sta.pop()`|栈顶元素|
@@ -204,9 +212,8 @@ stack<int> sta;
 |`sta.empty()`|判空|
 |`sta.size()`|大小|
 
-
-
 ## STL-<queue>
+
 ```cpp
 #inclue <queue>
 
@@ -216,6 +223,7 @@ queue<int> que;
 //优先级队列
 priority_queue<int> pque;
 ```
+
 |`que.push(1)`|入队|
 | ----- | ----- |
 |`int frontElement = que.front();`|队头|
@@ -229,9 +237,8 @@ priority_queue<int> pque;
 |`pque.empty()`|判空|
 |`pque.size()`|大小|
 
-
-
 ## STL-<set>
+
 ```cpp
 #include <set>
 
@@ -246,8 +253,8 @@ mst.insert(1);
 mst.count(1);  //2
 ```
 
-
 ##  STL-<map>(映射)
+
 ```cpp
 #include <map>
 
@@ -271,8 +278,8 @@ height.insert(pair);  //插入pair
 height.erase("tony"); //删除
 ```
 
-
 ## 精简头文件
+
 用一个头文件包含上述的头文件
 
 ```cpp
