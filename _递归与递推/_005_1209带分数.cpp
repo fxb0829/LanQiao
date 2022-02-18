@@ -3,7 +3,7 @@
  * @Author: fengxb
  * @Date: 2022-02-17 10:48:23
  * @LastEditor: fengxb
- * @LastEditTime: 2022-02-17 11:36:38
+ * @LastEditTime: 2022-02-18 16:06:30
  */
 #include <cstring>
 #include <cstdio>
@@ -20,7 +20,7 @@ int ans;
 
 bool check(int a,int c)
 {
-    int b = n * c-a * c;
+    long long b = n * (long long)c-a * (long long)c;
     if(!a || !b || !c) return false;
     memcpy(backup,st,sizeof st);
     //判断数字b的每一位是否有使用过的
