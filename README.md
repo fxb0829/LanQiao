@@ -3,7 +3,7 @@
  * @Author: fengxb
  * @Date: 2022-02-16 11:03:24
  * @LastEditor: fengxb
- * @LastEditTime: 2022-02-20 17:12:14
+ * @LastEditTime: 2022-02-21 23:26:57
 -->
 # 蓝桥杯竞赛题记
 
@@ -35,3 +35,4 @@
 5. [分巧克力](Notes/_1227_分巧克力.md)
 6. [前缀和](Notes/_795_前缀和.md)
 7. [子矩阵的和](Notes/_796_子矩阵的和.md)
+8. [激光炸弹](Notes/_99_激光炸弹.md)
