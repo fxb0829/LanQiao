@@ -3,7 +3,7 @@
  * @Author: fengxb
  * @Date: 2022-02-16 11:03:24
  * @LastEditor: fengxb
- * @LastEditTime: 2022-02-21 23:26:57
+ * @LastEditTime: 2022-02-22 15:36:43
 -->
 # 蓝桥杯竞赛题记
 
@@ -36,3 +36,4 @@
 6. [前缀和](Notes/_795_前缀和.md)
 7. [子矩阵的和](Notes/_796_子矩阵的和.md)
 8. [激光炸弹](Notes/_99_激光炸弹.md)
+9. [K倍区间](Notes/_1230_K倍区间.md)
