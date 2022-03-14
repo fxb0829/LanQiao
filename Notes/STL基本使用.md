@@ -1,17 +1,26 @@
-# STL基本使用
+---
+title: STL基本使用
+date: 2022-02-20
+categories:
+ - 算法
+tags:
+ - STL
+sticky: 1
+---
 
 ## C标准库常用函数
 
 1. `<cstring>`
 
+|  函数名称  |  函数意义  |
+| :-----: | :---: |
 |`strlen()`|字符串长度|
-| :-----: | ----- |
 |`strcmp()`|字符串比较|
 |`strcpy()`|字符串拷贝|
 |`memset()`|暴力清空|
 |`memcpy()`|暴力拷贝|
 
-```cpp
+```c
 char str[100];
 ...
 memset(str,0,sizeof(str));  //str字符数组全部置为0
@@ -19,28 +28,31 @@ memset(str,0,sizeof(str));  //str字符数组全部置为0
 
 2. `<cmath>`
 
-三角函数、指数函数、浮点取整函数
+​	三角函数、指数函数、浮点取整函数
 
 3. `<sdtdlib>`
 
+|     函数名称      |     函数意义      |
+| :---: | :---: |
 |`qsort()`|c语言快排|
-| ----- | ----- |
 |`rand()`|随机数|
 |`malloc() free()`|c语言动态分配内存|
 
 4. `<ctime>`
 
+| 函数名称  |              函数意义              |
+| :---: | :---: |
 |`time(0)`|从1970年到现在的秒数（配合随机数）|
-| ----- | ----- |
 |`clock()`|程序启动到目前位置的毫秒数|
 
 5. `<cctype>`
 
+|  函数名称   |         函数意义         |
+| :---: | :---: |
 |`isdigit()`|判断字符是否为数字|
-| ----- | ----- |
 |`isalpha()`|判断字符是否为大小写字母|
 
-## STL-<vector>
+## STL-`<vector>`
 
 `vector`可以看成一个“超级数组”
 
@@ -83,8 +95,9 @@ for(p = arr.begin(); p != arr.end(); p++)
 
 2. 常见操作
 
+|      函数名称      |               函数意义               |
+| :---: | :---: |
 |`list.size()`|数组元素个数$O(1)$|
-| ----- | ----- |
 |`list.clear()`|清空数组$O(n)$|
 |`list.empty()`|数组是否为空$O(1)$|
 |`list.begin()`|数组的首元素迭代器$O(1)$|
@@ -93,7 +106,7 @@ for(p = arr.begin(); p != arr.end(); p++)
 |`list.push_back()`|往数组添加元素$O(1)$|
 |`list.pop_back()`|删除数组的最后一个元素$O(1)$|
 
-### STL-<string>
+### STL-`<string>`
 
 1. 基本使用
 
@@ -105,8 +118,9 @@ str2.push_back("!");
 
 2. 基本操作
 
+|           函数名称            |           函数意义            |
+| :---: | :---: |
 |`str.length(), str.size()`|字符串长度$O(n)$|
-| ----- | ----- |
 |`str.insert(1,"aaa")`|在下标$1$的位置插入$O(n)$|
 |`str.insert(str.begin(),'a')`|在迭代器处插入一个字符$O(n)$|
 |`str.c_str()`|返回c语言字符串$O(n)$|
@@ -116,7 +130,7 @@ str2.push_back("!");
 |`str += str2`|`str.append(str2)`|
 |`str += 'a'`|`str.push_back('a')`|
 
-## STL-<algorithm>
+## STL-`<algorithm>`
 
 包含大量的算法
 
@@ -197,7 +211,7 @@ int firstLoc = lower_bound(arr.begin(),arr.end(),2)-arr.begin(); //2
 int lastLoc = upper_bound(arr.begin(),arr.end(),2)-arr.begin(); //4
 ```
 
-## STL-<stack>
+## STL-`<stack>`
 
 ```cpp
 #include <stack>
@@ -205,14 +219,15 @@ int lastLoc = upper_bound(arr.begin(),arr.end(),2)-arr.begin(); //4
 stack<int> sta;
 ```
 
+|           函数名称           | 函数意义 |
+| :---: | :---: |
 |`sta.push()`|入栈|
-| ----- | ----- |
 |`sta.topElement = sta.pop()`|栈顶元素|
 |`sta.pop()`|出栈|
 |`sta.empty()`|判空|
 |`sta.size()`|大小|
 
-## STL-<queue>
+## STL-`<queue>`
 
 ```cpp
 #inclue <queue>
@@ -224,8 +239,9 @@ queue<int> que;
 priority_queue<int> pque;
 ```
 
+|             函数名称              |   函数意义   |
+| :---: | :---: |
 |`que.push(1)`|入队|
-| ----- | ----- |
 |`int frontElement = que.front();`|队头|
 |`que.pop()`|弹出|
 |`que.empty()`|判空|
@@ -237,7 +253,7 @@ priority_queue<int> pque;
 |`pque.empty()`|判空|
 |`pque.size()`|大小|
 
-## STL-<set>
+## STL-`<set>`
 
 ```cpp
 #include <set>
@@ -253,7 +269,7 @@ mst.insert(1);
 mst.count(1);  //2
 ```
 
-##  STL-<map>(映射)
+##  STL-`<map>`(映射)
 
 ```cpp
 #include <map>
