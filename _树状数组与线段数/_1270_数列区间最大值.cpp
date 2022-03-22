@@ -9,7 +9,7 @@ int n,m;
 int w[N];
 struct Node{
     int l,r;
-    int maxv;
+    int maxv; 
 }tr[N*4];
 
 void pushhub(int u){
